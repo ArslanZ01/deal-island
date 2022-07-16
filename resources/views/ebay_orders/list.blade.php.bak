@@ -1,0 +1,51 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8  d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">{{ __('eBay Order') }}</div>
+
+                <div style="height: 80vh; overflow-x: auto;" class="card-body">
+                    @if(Session::has('ebay_orders_list'))
+                        @foreach(Session::get('ebay_orders_list') as $orders)
+                            <table class="table table-responsive">
+                                @foreach($orders as $index=>$order)
+                                    @if($index == 1)
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            @foreach($order as $key=>$value)
+                                                <th scope="col">{{ $value }}</th>
+{{--                                                <th scope="col">{{ str_replace(' ', '_', strtolower($value)) }}</th>--}}
+                                            @endforeach
+                                        </tr>
+                                        </thead>
+                                    @elseif($index > 1)
+                                        @if(!isset($order[0]))
+                                            @php continue; @endphp
+                                        @endif
+                                        @if($index == 2)
+                                        <tbody>
+                                        @endif
+                                            <tr>
+                                                <th scope="row">{{ $index-2 }}</th>
+                                                @foreach($order as $key=>$value)
+                                                    <th scope="row">{{ $value }}</th>
+                                                @endforeach
+                                            </tr>
+                                        @if($index == sizeof($orders)-1)
+                                        </tbody>
+                                        @endif
+                                    @endif
+                                @endforeach
+                            </table>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
