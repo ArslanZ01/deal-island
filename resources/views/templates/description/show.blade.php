@@ -73,18 +73,18 @@
                     <div style="border-left: 1px solid rgb(248, 144, 11); border-right: 1px solid rgb(248, 144, 11); color: rgb(39, 60, 44); line-height: 25px;">
                         <div class="container" style="padding-bottom: 20px; padding-top: 50px;">
                             <div class="row" style="">
+                                <div class="col-12 col-md-6" style="">
+                                    <div typeof="Product" vocab="https://schema.org/" style="">
+                                        {!! $description !!}
+                                    </div>
+                                </div>
+
                                 <div class="col-12 col-md-6" style="font-size: 14pt; padding-bottom: 40px;">
                                     <font face="Exo">
                                         <span class="mx-auto d-block img-fluid" style="width: 90%" title="Image">
 {{--                                            <img src="https://i.ebayimg.com/00/s/MTYwMFgxNTk0/z/jdQAAOSwEgJidqbY/$_1.JPG?set_id=2" style="max-width:100%; max-height:100%;">--}}
                                         </span>
                                     </font>
-                                </div>
-
-                                <div class="col-12 col-md-6" style="">
-                                    <div typeof="Product" vocab="https://schema.org/" style="">
-                                        {!! $description !!}
-                                    </div>
                                 </div>
                             </div>
                         </div>

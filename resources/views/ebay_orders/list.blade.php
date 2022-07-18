@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8  d-flex align-items-stretch">
+        <div class="col-md-12 d-flex align-items-stretch">
             <div class="card">
                 <div class="card-header">{{ __('eBay Order') }}</div>
 

@@ -40,4 +40,11 @@ Route::get('/templates/description/create', [App\Http\Controllers\Template\Descr
 
 Route::post('/templates/description/show', [App\Http\Controllers\Template\DescriptionController::class, 'show'])->name('templates.description.show');
 
+Route::get('/listings/create', [App\Http\Controllers\ListingController::class, 'create'])->name('listings.create');
+
+Route::post('/listings/store', [App\Http\Controllers\ListingController::class, 'store'])->name('listings.store');
+
+Route::get('/listings/show', [App\Http\Controllers\ListingController::class, 'show'])->name('listings.show');
+
+Route::get('/listings/list', [App\Http\Controllers\ListingController::class, 'list'])->name('listings.list');
 
