@@ -26,6 +26,9 @@
                             <div class="row" style="">
                                 <div class="col-12 col-md-12" style="">
                                     <div typeof="Product" vocab="https://schema.org/" style="">
+                                        <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Product Description</font></h2>
+
+                                        <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
                                         {!! $description !!}
                                     </div>
                                 </div>
