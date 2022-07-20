@@ -156,8 +156,8 @@
                                 <legend class="float-none w-auto px-1">Set 5</legend>
                                 <div class="row">
                                     <div class="col mb-3">
-                                        <label for="profit" class="form-label">Profit</label>
-                                        <input type="number" class="form-control" id="profit" name="profit">
+                                        <label for="comments" class="form-label">Comments</label>
+                                        <textarea type="text" rows="2" class="form-control" id="product_link" name="product_link"></textarea>
                                     </div>
                                 </div>
                             </fieldset>
