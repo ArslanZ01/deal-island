@@ -26,25 +26,25 @@ Route::get('/home', function () {
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
-Route::get('/ebay-orders/create', [App\Http\Controllers\EBayOrderController::class, 'create'])->name('ebay-orders.create');
+Route::get('/ebay-orders/create', [App\Http\Controllers\EBayOrderController::class, 'create'])->name('ebay-orders.create')->middleware('auth');
 
-Route::get('/ebay-orders/list', [App\Http\Controllers\EBayOrderController::class, 'list'])->name('ebay-orders.list');
+Route::get('/ebay-orders/list', [App\Http\Controllers\EBayOrderController::class, 'list'])->name('ebay-orders.list')->middleware('auth');
 
-Route::post('/ebay-orders/store', [App\Http\Controllers\EBayOrderController::class, 'store'])->name('ebay-orders.store');
+Route::post('/ebay-orders/store', [App\Http\Controllers\EBayOrderController::class, 'store'])->name('ebay-orders.store')->middleware('auth');
 
-Route::post('/ebay-orders/import', [App\Http\Controllers\EBayOrderController::class, 'import'])->name('ebay-orders.import');
+Route::post('/ebay-orders/import', [App\Http\Controllers\EBayOrderController::class, 'import'])->name('ebay-orders.import')->middleware('auth');
 
-Route::get('/templates/description/create', [App\Http\Controllers\Template\DescriptionController::class, 'create'])->name('templates.description.create');
+Route::get('/templates/description/create', [App\Http\Controllers\Template\DescriptionController::class, 'create'])->name('templates.description.create')->middleware('auth');
 
-Route::post('/templates/description/show', [App\Http\Controllers\Template\DescriptionController::class, 'show'])->name('templates.description.show');
+Route::post('/templates/description/show', [App\Http\Controllers\Template\DescriptionController::class, 'show'])->name('templates.description.show')->middleware('auth');
 
-Route::get('/listings/create', [App\Http\Controllers\ListingController::class, 'create'])->name('listings.create');
+Route::get('/listings/create', [App\Http\Controllers\ListingController::class, 'create'])->name('listings.create')->middleware('auth');
 
-Route::post('/listings/store', [App\Http\Controllers\ListingController::class, 'store'])->name('listings.store');
+Route::post('/listings/store', [App\Http\Controllers\ListingController::class, 'store'])->name('listings.store')->middleware('auth');
 
-Route::get('/listings/show', [App\Http\Controllers\ListingController::class, 'show'])->name('listings.show');
+Route::get('/listings/show', [App\Http\Controllers\ListingController::class, 'show'])->name('listings.show')->middleware('auth');
 
-Route::get('/listings/list', [App\Http\Controllers\ListingController::class, 'list'])->name('listings.list');
+Route::get('/listings/list', [App\Http\Controllers\ListingController::class, 'list'])->name('listings.list')->middleware('auth');
 

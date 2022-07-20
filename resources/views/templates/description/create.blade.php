@@ -25,12 +25,20 @@
                                 <textarea type="text" class="form-control" id="title" name="title"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="description" class="form-label">Description</label>
-                                <textarea type="text" class="form-control" id="description" name="description"></textarea>
+                                <label for="product_details" class="form-label">Description</label>
+                                <textarea type="text" class="form-control" id="product_details" name="product_details"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="detail" class="form-label">Detail</label>
-                                <textarea type="text" class="form-control" id="detail" name="detail"></textarea>
+                                <label for="features_and_further_details" class="form-label">Description</label>
+                                <textarea type="text" class="form-control" id="features_and_further_details" name="features_and_further_details"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="specifications" class="form-label">Detail</label>
+                                <textarea type="text" class="form-control" id="specifications" name="specifications"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dimensions" class="form-label">Detail</label>
+                                <textarea type="text" class="form-control" id="dimensions" name="dimensions"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

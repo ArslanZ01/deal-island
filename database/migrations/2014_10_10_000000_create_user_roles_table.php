@@ -24,6 +24,8 @@ return new class extends Migration
             [ 'id' => 1, 'name' => 'Root' ],
             [ 'id' => 2, 'name' => 'Admin' ],
             [ 'id' => 3, 'name' => 'Manager' ],
+            [ 'id' => 4, 'name' => 'Support' ],
+            [ 'id' => 5, 'name' => 'Hunter' ],
         ]);
     }
 

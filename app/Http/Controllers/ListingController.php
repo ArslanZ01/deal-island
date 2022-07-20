@@ -11,6 +11,11 @@ class ListingController extends Controller
         return view('listings.create');
     }
 
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
+
     public function show(Request $request)
     {
         return view('listings.show');

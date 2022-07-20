@@ -31,7 +31,9 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert([
             [ 'name' => 'Root', 'username' => 'root', 'email'=>'root@email.com', 'password'=>Hash::make('root123'), 'role'=>'1' ],
             [ 'name' => 'Admin', 'username' => 'admin', 'email'=>'admin@email.com', 'password'=>Hash::make('admin123'), 'role'=>'2' ],
-            [ 'name' => 'Manager', 'username' => 'manager', 'email'=>'manager@email.com', 'password'=>Hash::make('shop123'), 'role'=>'3' ],
+            [ 'name' => 'Manager', 'username' => 'manager', 'email'=>'manager@email.com', 'password'=>Hash::make('manager123'), 'role'=>'3' ],
+            [ 'name' => 'Support', 'username' => 'support', 'email'=>'support@email.com', 'password'=>Hash::make('support123'), 'role'=>'4' ],
+            [ 'name' => 'Hunter', 'username' => 'hunter', 'email'=>'hunter@email.com', 'password'=>Hash::make('hunter123'), 'role'=>'5' ],
         ]);
     }
 
