@@ -55,13 +55,13 @@
         tinymce.init({
             selector: 'textarea#product_details, textarea#features_and_further_details, textarea#specifications, textarea#dimensions',
             height: 200,
-            menubar: false,
+            menubar: true,
             plugins: [
                 'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
                 'insertdatetime', 'media', 'table', 'help', 'wordcount'
             ],
-            toolbar: 'undo redo | blocks | fontsizeselect | ' +
+            toolbar: 'undo redo | blocks | ' +
                 'bold italic backcolor | alignleft aligncenter ' +
                 'alignright alignjustify | bullist numlist outdent indent | ' +
                 'removeformat | help',
