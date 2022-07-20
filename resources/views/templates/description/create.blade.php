@@ -53,7 +53,7 @@
 @section('scripts')
     <script>
         tinymce.init({
-            selector: 'textarea#description, textarea#detail',
+            selector: 'textarea#product_details, textarea#features_and_further_details, textarea#specifications, textarea#dimensions',
             height: 200,
             menubar: false,
             plugins: [
