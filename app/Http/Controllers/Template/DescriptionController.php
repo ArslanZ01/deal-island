@@ -54,7 +54,6 @@ class DescriptionController extends Controller
                         $insert_data['thumb'] = json_encode($result->data->thumb);
                     if (isset($result->data->medium))
                         $insert_data['medium'] = json_encode($result->data->medium);
-                    dd($insert_data);
                     DB::table('imgbb_uploaded_images')->insert($insert_data);
                 }
                 else
