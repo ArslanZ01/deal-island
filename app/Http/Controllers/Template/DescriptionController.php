@@ -34,7 +34,7 @@ class DescriptionController extends Controller
                 $image = DB::table('imgbb_uploaded_images')->where('image_id', $result->data->id);
                 if ($image->count() == 0) {
                     $data['product_image'] = $result->data->url;
-                    DB::table('imgbb_uploaded_images')->insert([
+                    $insert_data = [
                         'image_id'=>$result->data->id,
                         'title'=>$result->data->title,
                         'url_viewer'=>$result->data->url_viewer,
@@ -45,12 +45,17 @@ class DescriptionController extends Controller
                         'size'=>$result->data->size,
                         'time'=>$result->data->time,
                         'expiration'=>$result->data->expiration,
-                        'image'=>json_encode($result->data->image),
-                        'thumb'=>json_encode($result->data->thumb),
-                        'medium'=>json_encode($result->data->medium),
                         'delete_url'=>$result->data->delete_url,
                         'created_by'=>Auth::id()
-                    ]);
+                    ];
+                    if (isset($result->data->image))
+                        $insert_data['image'] = json_encode($result->data->image);
+                    if (isset($result->data->thumb))
+                        $insert_data['thumb'] = json_encode($result->data->thumb);
+                    if (isset($result->data->medium))
+                        $insert_data['medium'] = json_encode($result->data->medium);
+                    dd($insert_data);
+                    DB::table('imgbb_uploaded_images')->insert($insert_data);
                 }
                 else
                     $data['product_image'] = $image->get()->first()->url;

@@ -26,9 +26,9 @@ return new class extends Migration
             $table->integer('size');
             $table->integer('time');
             $table->integer('expiration');
-            $table->text('image');
-            $table->text('thumb');
-            $table->text('medium');
+            $table->text('image')->nullable();
+            $table->text('thumb')->nullable();
+            $table->text('medium')->nullable();
             $table->string('delete_url');
             $table->bigInteger('created_by')->unsigned()->nullable();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('set null');
