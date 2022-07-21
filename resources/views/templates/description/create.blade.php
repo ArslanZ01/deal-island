@@ -18,7 +18,7 @@
                             {{ Session::get('error') }}
                         </div>
                     @endif
-                        <form method="post" action="{{ route('templates.description.show') }}">
+                        <form method="post" action="{{ route('templates.description.show') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
@@ -39,6 +39,10 @@
                             <div class="mb-3">
                                 <label for="dimensions" class="form-label">Dimensions</label>
                                 <textarea type="text" class="form-control" id="dimensions" name="dimensions"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="product_image" class="form-label">Product Image</label>
+                                <input class="form-control" type="file" id="product_image" name="product_image">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

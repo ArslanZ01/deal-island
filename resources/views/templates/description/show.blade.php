@@ -14,39 +14,68 @@
                     <style type="text/css">.element{background:#f8900b}</style>
                     <div class="element" style="font-size: 14pt; border-width: 1px; border-style: solid; border-color: rgb(244, 246, 247) rgb(248, 144, 11) rgb(248, 144, 11); color: rgb(255, 255, 255); line-height: 45px;">
                         <div class="container" style="padding: 40px 0 40px 0">
-                            <div class="col-12 col-md-12">
-                                <h1 style="text-align: center"><font face="Exo">{!! $title !!}</font></h1>
-                                <hr style="background: #fff; height: 1px; width: 10%" align="center">
+                            <div class="row">
+                                <div style="display: flex; align-items: center;" class="col-2 col-md-2">
+                                    <img alt="Image" class="mx-auto d-block img-fluid" src="https://i.imgur.com/wecHxKm.jpeg" style="border-radius: 20%;" title="Image">
+                                </div>
+                                <div class="col-10 col-md-10">
+                                    <h1 style="text-align: center"><font face="Exo">{!! $title !!}</font></h1>
+                                    <hr style="background: #fff; height: 1px; width: 10%" align="center">
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div style="border-left: 1px solid rgb(248, 144, 11); border-right: 1px solid rgb(248, 144, 11); color: rgb(39, 60, 44); line-height: 25px;">
                         <div class="container" style="padding-bottom: 20px; padding-top: 50px;">
-                            @isset($product_details)
-                                <div class="row" style="">
-                                <div class="col-12 col-md-12" style="">
-                                    <div typeof="Product" vocab="https://schema.org/" style="">
-                                        <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Product Details</font></h2>
-
-                                        <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
-                                        {!! $product_details !!}
+                            <div class="row" style="">
+                                @isset($product_image)
+                                    <div class="col-12 col-md-6" style="font-size: 14pt; padding-bottom: 40px;">
+                                        <font face="Exo">
+                                        <span class="mx-auto d-block img-fluid" style="width: 90%" title="Image">
+                                            <img src="{{ $product_image }}" style="max-width:100%; max-height:100%;">
+                                        </span>
+                                        </font>
                                     </div>
-                                </div>
-                            </div>
-                            @endisset
-                            @isset($features_and_further_details)
-                                <div class="row" style="">
-                                <div class="col-12 col-md-12" style="">
-                                    <div typeof="Product" vocab="https://schema.org/" style="">
-                                        <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Features and Further Details</font></h2>
+                                    <div class="col-12 col-md-6" style="">
+                                        @isset($product_details)
+                                            <div typeof="Product" vocab="https://schema.org/" style="">
+                                                <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Product Details</font></h2>
 
-                                        <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
-                                        {!! $features_and_further_details !!}
+                                                <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
+                                                {!! $product_details !!}
+                                            </div>
+                                        @endisset
+                                        @isset($features_and_further_details)
+                                            <div typeof="Product" vocab="https://schema.org/" style="">
+                                                <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Features and Further Details</font></h2>
+
+                                                <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
+                                                {!! $features_and_further_details !!}
+                                            </div>
+                                        @endisset
                                     </div>
-                                </div>
+                                @else
+                                    <div class="col-12 col-md-12" style="">
+                                        @isset($product_details)
+                                            <div typeof="Product" vocab="https://schema.org/" style="">
+                                                <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Product Details</font></h2>
+
+                                                <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
+                                                {!! $product_details !!}
+                                            </div>
+                                        @endisset
+                                        @isset($features_and_further_details)
+                                            <div typeof="Product" vocab="https://schema.org/" style="">
+                                                <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Features and Further Details</font></h2>
+
+                                                <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
+                                                {!! $features_and_further_details !!}
+                                            </div>
+                                        @endisset
+                                    </div>
+                                @endisset
                             </div>
-                            @endisset
                         </div>
                     </div>
 
@@ -54,33 +83,33 @@
                         <div class="container" style="padding: 40px 0px;">
                             @isset($specifications)
                                 <div class="col-12 col-md-12" style="">
-                                <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Specifications</font></h2>
+                                    <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Specifications</font></h2>
 
-                                <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
-                                {!! $specifications !!}
-                                <font style="font-size: 14pt;" face="Exo">
-                                    <font>
-                                        <font face="Exo"><font>
+                                    <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
+                                    {!! $specifications !!}
+                                    <font style="font-size: 14pt;" face="Exo">
+                                        <font>
+                                            <font face="Exo"><font>
+                                                </font>
                                             </font>
                                         </font>
                                     </font>
-                                </font>
-                            </div>
+                                </div>
                             @endisset
                             @isset($dimensions)
                                 <div class="col-12 col-md-12" style="">
-                                <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Dimensions</font></h2>
+                                    <h2 style="color: rgb(248, 144, 11); line-height: 45px;"><font style="" size="5" face="Exo">Dimensions</font></h2>
 
-                                <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
-                                {!! $dimensions !!}
-                                <font style="font-size: 14pt;" face="Exo">
-                                    <font>
-                                        <font face="Exo"><font>
+                                    <hr style="font-size: 14pt; background: rgb(248, 144, 11); height: 1px; width: 10%;" align="left">
+                                    {!! $dimensions !!}
+                                    <font style="font-size: 14pt;" face="Exo">
+                                        <font>
+                                            <font face="Exo"><font>
+                                                </font>
                                             </font>
                                         </font>
                                     </font>
-                                </font>
-                            </div>
+                                </div>
                             @endisset
                             <font style="font-size: 14pt;" face="Exo">
                                 <font>
