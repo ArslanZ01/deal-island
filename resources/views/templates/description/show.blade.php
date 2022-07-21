@@ -16,7 +16,7 @@
                         <div class="container" style="padding: 40px 0 40px 0">
                             <div class="row">
                                 <div style="display: flex; align-items: center;" class="col-2 col-md-2">
-                                    <img alt="Image" class="mx-auto d-block img-fluid" src="https://i.imgur.com/wecHxKm.jpeg" style="border-radius: 20%;" title="Image">
+                                    <img alt="Image" class="mx-auto d-block img-fluid" src="https://i.ibb.co/gzPWPrj/wecHxKm.jpg" style="border-radius: 20%;" title="Image">
                                 </div>
                                 <div class="col-10 col-md-10">
                                     <h1 style="text-align: center"><font face="Exo">{!! $title !!}</font></h1>
