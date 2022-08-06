@@ -25,6 +25,7 @@
                                 <select class="form-select" id="deals" name="deals">
                                     <option value="deal_island" selected>Deal Island</option>
                                     <option value="hubco_deals">Hubco Deals</option>
+                                    <option value="khazina_deals">Khazina Deals</option>
                                 </select>
                             </div>
                             <div class="mb-3">
