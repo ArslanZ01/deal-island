@@ -21,6 +21,13 @@
                         <form method="post" action="{{ route('templates.description.show') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
+                                <label for="deals" class="form-label">Deals</label>
+                                <select class="form-select" id="deals" name="deals">
+                                    <option value="deal_island" selected>Deal Island</option>
+                                    <option value="hubco_deals">Hubco Deals</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
                                 <textarea type="text" class="form-control" id="title" name="title"></textarea>
                             </div>

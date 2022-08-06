@@ -61,6 +61,9 @@ class DescriptionController extends Controller
             }
         }
 
-        return view('templates.description.show')->with($data);
+        if ($request->input('deals') == 'deal_island')
+            return view('templates.description.show-deal-island')->with($data);
+        if ($request->input('deals') == 'hubco_deals')
+            return view('templates.description.show-hubco-deals')->with($data);
     }
 }
