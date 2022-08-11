@@ -30,7 +30,7 @@ class DescriptionController extends Controller
             curl_setopt($ch, CURLOPT_POSTFIELDS, ['image' => base64_encode(file_get_contents($request->file('product_image')->path()))]);
             $result = json_decode(curl_exec($ch));
             curl_close($ch);
-            if ($result->success) {
+            if ($result && $result->success) {
                 $image = DB::table('imgbb_uploaded_images')->where('image_id', $result->data->id);
                 if ($image->count() == 0) {
                     $data['product_image'] = $result->data->url;
