@@ -1,5 +1,5 @@
 <div style="text-align: center">
-    <button style="background-color: teal; color: black; border-radius: 5px" class="btn-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementsByTagName('table')[0].outerHTML)">Copy To Clipboard</button>
+    <button style="background-color: white; color: black; border-radius: 5px" class="btn-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementsByTagName('table')[0].outerHTML)">Copy To Clipboard</button>
 </div>
 <table style="border-spacing: 0px; width: 100%;" align="center">
     <tbody>

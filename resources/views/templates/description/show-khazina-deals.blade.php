@@ -1,5 +1,5 @@
 <div style="text-align: center">
-    <button style="background-color: teal; color: black; border-radius: 5px" class="btn-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementsByTagName('table')[0].outerHTML)">Copy To Clipboard</button>
+    <button style="background-color: white; color: black; border-radius: 5px" class="btn-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementsByTagName('table')[0].outerHTML)">Copy To Clipboard</button>
 </div>
 <table style="border-spacing: 0px; width: 100%;" align="center">
     <tbody>
@@ -15,10 +15,10 @@
                     <div class="element" style="font-size: 14pt; border-width: 1px; border-style: solid; border-color: #0a91ae #0a91ae #0a91ae; color: rgb(255, 255, 255); line-height: 45px;">
                         <div class="container" style="padding: 40px 0 40px 0">
                             <div class="row">
-                                <div style="display: flex; align-items: center;" class="col-2 col-md-2">
-                                    <img alt="Image" class="mx-auto d-block img-fluid" src="https://i.ibb.co/1dXx6kJ/LOGO-PSD-2x.png" style="border-radius: 20%;" title="Image">
+                                <div style="display: flex; align-items: center;" class="col-3 col-md-3">
+                                    <img alt="Image" class="mx-auto d-block img-fluid" src="https://i.ibb.co/f0b6V2x/LOGO-PSD-3x.jpg" style="border-radius: 5px;" title="Image">
                                 </div>
-                                <div class="col-10 col-md-10">
+                                <div class="col-9 col-md-9">
                                     <h1 style="text-align: center"><font face="Exo">{!! $title !!}</font></h1>
                                     <hr style="background: #fff; height: 1px; width: 10%" align="center">
                                 </div>
@@ -184,7 +184,9 @@
                                         <div style="border-left: 1px solid #0a91ae; border-right: 1px solid #0a91ae; color: #353535; line-height: 25px">
                                             <div class="container" style="padding-top: 40px; padding-bottom: 40px">
                                                 <div class="row">
-                                                    <div class="col-12 col-md-6" style="padding-bottom: 10px"><font face="Exo"><img alt="Image" class="mx-auto d-block img-fluid" src="https://i.ibb.co/1dXx6kJ/LOGO-PSD-2x.png" style="width: 40%" title="Image"></font></div>
+                                                    <div class="col-12 col-md-6" style="display: flex; align-items: center;" >
+                                                        <font face="Exo"><img alt="Image" class="mx-auto d-block img-fluid" src="https://i.ibb.co/f0b6V2x/LOGO-PSD-3x.jpg" style="width: 50%; border-radius: 5px" title="Image"></font>
+                                                    </div>
 
                                                     <div class="col-12 col-md-6">
                                                         <div typeof="Product" vocab="https://schema.org/">
