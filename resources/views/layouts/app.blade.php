@@ -110,7 +110,7 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown" hidden>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ __('eBay Orders') }}
                                 </a>
